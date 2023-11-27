@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adaptive</title>
+    <style>
+        body {
+            background-color: rgb(224, 224, 224);
+            margin: 10px;
+        }
+
+        form {
+            display: flex;
+            /* flex-direction:row ; */
+            padding: 10px;
+            background-color: white;
+            box-shadow: 0px 2px 28px -3px rgba(0, 0, 0, 0.63);
+            gap: 10px;
+
+        }
+
+        h4 {
+            font-weight: bold;
+            font-size: larger;
+        }
+
+
+        button {
+            color: white;
+            background-color: rgb(43, 100, 206);
+            align-self: flex-start;
+            width: 20%;
+            height: 30px;
+            border: none;
+        }
+
+        .progress-cont {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            border: 1px solid rgb(17, 17, 17);
+            padding: 5px;
+            position: relative;
+        }
+
+        .progress-box {
+            position: absolute;
+            border: none;
+            background-color: rgb(208, 214, 226, 255);
+            top: 0;
+            bottom: 0;
+            left: 0;
+            width: 50%;
+        }
+
+        .index {
+            z-index: 1;
+        }
+       @media (max-width: 600px){
+         form{
+            flex-direction: column;
+         }
+         
+       }
+    </style>
+</head>
+
+<body>
+    <form>
+        <img src="loading.png" width="220px" height="120">
+        <div>
+            <div class="progress-cont">
+                <span class="index">UPLOADING 40%</span>
+                <div class="progress-box"></div>
+                <span class="index">About 23 minutes remaining</span>
+            </div>
+            <h4>Title of video</h4>
+            <p>* Your video is steel uploading. Please keep this page open untill it`s done.</p>
+        </div>
+
+        <button>DONE</button>
+    </form>
+
+</body>
+
+</html>
