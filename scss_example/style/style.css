@@ -127,24 +127,17 @@ header nav ul li a:hover, header nav ul li a.active {
   color: #dfe1f4;
   padding: 1vh 4vw;
 }
-#features h2 {
+#features h2{
   text-align: center;
 }
-#features div {
+#features > div {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   gap: 6%;
-  align-items: center;
-  text-align: center;
   padding: 10px;
 }
-#features div ol {
-  border: 2px solid #eee;
-  border-radius: 20% 0;
-  border-bottom-width: 1px;
-  border-left-width: 1px;
-  padding: 0;
+#features > div ol {
   list-style-position: inside;
   font-style: italic;
-}/*# sourceMappingURL=style.css.map */
+}
