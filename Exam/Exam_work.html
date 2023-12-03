@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam</title>
+    <style>
+        body{
+            background-color: white;
+            margin: 0;
+            padding: 30px;
+        }
+        header{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        header div h3{
+            display: inline;
+        }
+        hr{
+            margin: 0;
+        }
+        h1{
+            text-align: center;
+            font-weight: lighter;
+        }
+        h2{
+            font-weight: lighter;
+            font-size: 40px;            
+        }
+        button{
+            background-color: white;
+            border: 1px solid rgba(0, 0, 0, 0.3);
+            border-radius: 5px;
+            font-size: larger;
+            text-transform: uppercase;
+            padding: 10px;
+            margin: 5px;
+        }
+        .main-grid img{
+            margin: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .gallery-photos img{
+            margin: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .title{
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .menu{
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            font-size: larger;
+        }
+        .head-nav-block{
+            display: flex;
+            gap: 10px;
+        }
+        .social-network-icons{
+            display: flex;
+            flex-direction: row;
+            gap: 25px;
+        }
+        .main-grid{
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 300 1fr 1fr;
+            margin: 0;
+        }
+        .first-main-content{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr;
+            margin: 0;
+        }
+        .second-main-content{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+            margin: 0;
+        }
+        .text-content{
+            align-self: center;
+            margin: 30px;
+        }
+        .middle-article{
+            grid-column: span 2;
+            padding: 30px;
+        }
+        .gallery-photos{
+            display: grid;
+            grid-template-columns: 1fr 12em 13em 1fr;
+            grid-template-rows: 100;
+        }
+        .features-grid{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+        }
+        div.features-grid>div{
+            align-items: center;
+            text-align: center;
+            padding: 10px;
+        }
+        .one{
+            border-right: 1px solid rgba(0, 0, 0, 0.3);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+        }
+        .two{
+            border-right: 1px solid rgba(0, 0, 0, 0.3);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+        }
+        .three{
+            border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+        }
+        .five{
+            border-right: 1px solid rgba(0, 0, 0, 0.3);
+        }
+        .four{
+            border-right: 1px solid rgba(0, 0, 0, 0.3);
+        }
+        .write-to-us{
+            display: flex;
+            flex-direction: column;
+            font-weight: bold;
+            margin-bottom: 50px;
+            gap:20px;
+        }
+        .personal-info{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+            justify-content: space-around;
+            align-items: center;
+            gap: 40px;
+        }
+        .personal-info div span{
+            text-align: left;
+        }
+        .write-to-us input[type="text"]{
+            display: block;
+            width: 100%;
+            border: 1px solid rgba(0, 0, 0, 0.3);
+            border-radius: 3px;
+        }
+        .message-input{
+            height: 7em;
+        }
+        .bottom-of-WriteToUs{
+            display: flex;
+            justify-content: space-between;
+        }
+        .social-network-icons-footer{
+            display: flex;
+            flex-direction: row;
+            gap: 25px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        .social-network-icons-footer a{
+            border: 1px solid black;
+            border-radius: 1000px;
+            padding: 10px;
+        }
+        .rows-menu{
+            display: none;
+            border: none;
+        }
+        .copywrite{
+            text-align: center;
+            text-transform: uppercase;
+        }
+        @media screen and (min-width:600px) and (max-width:850px) {
+            .social-network-icons{
+                display: none;
+            }
+            header{
+                justify-content: center;
+            }
+            .menu{
+                gap: 35px;
+            }
+            .head-nav-block{
+                gap: 35px;
+            }
+            .second-main-content{
+                grid-template-columns: 1fr 1fr;
+            }
+            .middle-article{
+                grid-column: span 1;
+            }
+            .gallery-photos div:nth-child(odd){
+                display: none;
+                justify-content: center;
+            }
+            .gallery-photos{
+                grid-template-columns: 1fr 1fr;
+                margin-left: 20%;
+                margin-right: 20%;
+
+            }
+            .gallery-photos div{
+                height: 80%;
+            }
+            .features-grid{
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr 1fr;
+                margin-left: 20%;
+                margin-right: 20%;
+            }
+            .two{
+                border-right: none;
+            }
+            .four{
+                border-right: none;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+            }
+            .three{
+                border-right: 1px solid rgba(0, 0, 0, 0.3);
+            }
+            .write-to-us{
+                margin-left: 20%;
+                margin-right: 20%;
+            }
+        }
+        @media screen and (max-width:600px) {
+            .social-network-icons{
+                display: none;
+            }
+            header{
+                justify-content: space-between;
+            }
+            .head-nav-block{
+                display: none;
+            }
+            .first-main-content{
+                grid-template-columns: 1fr;
+            }
+            .second-main-content{
+                grid-template-columns: 1fr;
+            }
+            .story1{
+                order: -1;
+            }
+            .rows-menu{
+                display: inline;
+            }
+            .title{
+                margin: 0;
+            }
+            .gallery-photos div{
+                display: none;
+                justify-content: center;
+                height: 100%;
+            }
+            .gallery-photos div:nth-child(3){
+                display: inline;
+                justify-content: center;
+            }
+            .gallery-photos{
+                grid-template-columns: 1fr;
+                margin-left: 20%;
+                margin-right: 20%;
+            }
+            .features-grid{
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+                margin-left: 20%;
+                margin-right: 20%;
+            }
+            .features-grid div{
+                border-right: none;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+            }
+            .write-to-us{
+                margin-left: 20%;
+                margin-right: 20%;
+            }
+            .personal-info{
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr;
+                justify-content: space-around;
+                align-items: center;
+                gap: 20px;
+            }
+            .contact-me{
+                display: block;
+            }
+            .social-network-icons-footer{
+                gap: 10px;
+            }
+        }
+        @media screen and (min-width:850px) {
+            .gallery-photos div{
+                justify-content: center;
+                height: 70%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="menu">
+            <span class="title">Tour-guide</span>
+            <nav class="head-nav-block">
+                <span>Stories</span>
+                <span>Gallery</span>
+                <span>Features</span>
+                <span>Write to us</span>
+            </nav>
+        </div>
+        <div class="social-network-icons">
+            <a><img src="Exam_images/icons8-twitter-30.png"></a>
+            <a><img src="Exam_images/icons8-facebook-30.png"></a>
+            <a><img src="Exam_images/icons8-instagram-30.png"></a>
+            <a><img src="Exam_images/icons8-youtube-30.png"></a>
+            <a><img src="Exam_images/icons8-gmail-30.png"></a>
+        </div>
+        <div class="rows-menu">
+            <img src="Exam_images/icons8-rows-30.png" alt="">
+        </div>
+    </header>
+    <hr>
+
+    <main class="main-grid">
+        <div class="first-main-content">
+            <div class="text-content">
+                <article>
+                    <h2>Let's hit the road</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non, sequi! Porro voluptatem nam sapiente molestiae tenetur blanditiis neque ab, ullam distinctio esse! Aliquid, tempora in?</p>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere quidem obcaecati incidunt?</p>
+                </article>
+                <button>Start</button>
+            </div>
+            
+            <img src="Exam_images/sunset.jpg">
+        </div>  
+        <hr>
+        <div class="second-main-content">
+            <img src="Exam_images/camp-fire.jpg">
+            <div class="middle-article story1">
+                <article>
+                    <h2>Story 1</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, praesentium deleniti quasi laudantium hic in tempore! Aperiam iste cumque ducimus ullam deleniti temporibus nulla, assumenda incidunt magni inventore repudiandae in!</p>
+                </article>
+                <button>Start</button>
+            </div>
+        </div>
+        <hr>
+        <div class="second-main-content"> 
+            <div class="middle-article">
+                <article>
+                    <h2>Story 2</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, praesentium deleniti quasi laudantium hic in tempore! Aperiam iste cumque ducimus ullam deleniti temporibus nulla, assumenda incidunt magni inventore repudiandae in!</p>
+                </article>
+                <button>Start</button>
+            </div>
+            <img src="Exam_images/gass-lamp.jpg">
+        </div>
+        <hr>
+    </main>
+
+    <h1>Gallery</h1>
+    <div class="gallery-photos">
+        <div><img src="Exam_images/tent2.jpg" alt=""></div>
+        <div><img src="Exam_images/kazan.jpg" alt=""></div>
+        <div><img src="Exam_images/moon.jpg" alt=""></div>
+        <div><img src="Exam_images/tent.jpg" alt="" ></div>
+    </div>
+    <h1>Features</h1>
+    <div class="features-grid">
+        <div class="one">
+            <img src="Exam_images/icons8-plane-30.png" alt="">
+            <h3>One</h3>
+            <p>Lorem ipsum dolor sit amet.</p>
+        </div>
+        <div class="two">
+            <img src="Exam_images/icons8-map-30.png" alt="">
+            <h3>Two</h3>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+        </div>
+        <div class="three">
+            <img src="Exam_images/icons8-clip-30.png" alt="">
+            <h3>Three</h3>
+            <p>Lorem ipsum dolor sit.</p>
+        </div>
+        <div class="four">
+            <img src="Exam_images/icons8-alarm-30.png" alt="">
+            <h3>Four</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. In, vero vitae minus nisi recusandae unde natus!</p>
+        </div>
+        <div class="five">
+            <img src="Exam_images/icons8-face-id-30.png" alt="">
+            <h3>Five</h3>
+            <p>Lorem ipsum dolor sit amet consectetur.</p>
+        </div>
+        <div class="six">
+            <img src="Exam_images/icons8-atom-30.png" alt="">
+            <h3>Six</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem hic ab laborum?</p>
+        </div>
+    </div>
+    <h1>Write to us</h1>
+    <div class="write-to-us">
+        <div class="personal-info"> 
+            <div>
+                <span>Name:</span>
+                <input type="text">
+            </div>
+            <div>
+                <span>Email:</span>
+                <input type="text">
+            </div>
+            <div>
+                <span>Phone:</span>
+                <input type="text">
+            </div>
+        </div>
+        <div>
+            <span class="contact-me">Contact me via:</span>
+            <input type="radio" name="Contact">
+            <span>Email</span>
+            <input type="radio" name="Contact">
+            <span>Phone</span>
+            <input type="radio" name="Contact">
+            <span>Telegram</span>
+        </div>
+        <div>
+            <span>Topic:</span>
+            <input type="text" placeholder="">
+        </div>
+        <div>
+            <span>Message</span>
+            <input class="message-input" type="text">
+        </div>
+        <div class="bottom-of-WriteToUs">
+            <div>
+                <input type="checkbox">
+                <span>I am a human</span>
+            </div>
+            <button>Send</button>
+        </div>
+    </div>
+    <hr>
+    <footer>
+        <div class="social-network-icons-footer">
+            <a><img src="Exam_images/icons8-twitter-30.png"></a>
+            <a><img src="Exam_images/icons8-facebook-30.png"></a>
+            <a><img src="Exam_images/icons8-instagram-30.png"></a>
+            <a><img src="Exam_images/icons8-youtube-30.png"></a>
+            <a><img src="Exam_images/icons8-gmail-30.png"></a>
+        </div>
+        <p class="copywrite">&#169 untitled 2023</p>
+    </footer>
+</body>
+</html>
